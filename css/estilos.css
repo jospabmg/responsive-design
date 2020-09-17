@@ -1,0 +1,732 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valores */
+
+
+/* seletor de etiqueta  header - section - article - nav */
+/* header {
+  background: pink;
+  color: red
+} */
+
+/* selector descendente  */
+/* body header div nav ol li a  */
+
+/* selector de clase . */
+
+/* .link */
+
+/* selector de id # */
+/* #portafolio */
+
+
+
+/* gris oscuro = #1d252c */
+/* gris claro = #626262 */
+/* background gris = #1b2127 */
+/* celeste = #026fff */
+
+/* A continucación estoy copiando el contenido del archivo style que me venía con una carpeta que me he bajado en un zip. Esta carpeta contiene los elementos necesarios para que pueda insertar el icono del menú de hamburguesa. Esto lo he bajado de la página , https://icomoon.io ,. En verdad es una fuente y se comportará como tal a nivel local sin tener singún script que llame a otro sitio como pasaba con la llamada a la api de fuentes de google. Total que pego el código que hace falta que es el siguiente:  */
+/* Atentos aquí porque la carpeta de fuentes la hemos ubicado dentro del directorio de trabajo. Por lo tanto las llamadas a los archivos de estas fuentes deben ser modificados para que encuentren la ruta. */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?l9q23q');
+  src:  url('../fonts/icomoon.eot?l9q23q#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?l9q23q') format('truetype'),
+    url('../fonts/icomoon.woff?l9q23q') format('woff'),
+    url('../fonts/icomoon.svg?l9q23q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  /* font-style: italic; */
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -.2px;
+  color: white;
+  margin: 0;
+  /* margin: 100px 150px 70px 30px; */
+  /* text-transform: uppercase; */
+  /* text-decoration: dashed; */
+}
+h1 strong {
+  color: #026fff;
+}
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero {
+  height: 300px;
+  /* background-image: url('../images/hero.jpg'); */
+  background-color: #1b2127;
+  /* background-size: 500px 300px; */
+  /* background-repeat: no-repeat; */
+  /* background-position-x: right; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.hero-image{
+  object-fit: cover;
+}
+
+
+.portfolio {
+  background: #fafafa;
+  padding: 20px;
+  /* background: red; */
+}
+
+.project {
+  /* border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid orange;
+  border-bottom: 10px solid pink; */
+  /* color: blue; */
+  /* border-top-color: red;
+  border-top-width: 15px;
+  border-top-style: solid; */
+  border: 1px solid gray;
+  border-radius: 10px;
+  /* border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  /* margin: 10px; */
+  margin-bottom: 15px;
+  /* margin-right
+  margin-left
+  margin-top */
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
+}
+.project-description {
+  font-size: 20px;
+}
+.project strong {
+  font-family: 'Fjalla One', sans-serif;
+}
+/* .project-date {
+  margin: 10px 0;
+} */
+
+.project-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Vamos a variar los valores siguientes para desatascar las dimensiones estáticas siguientes y hacerlas un poquito más elásticas. */
+.project-details {
+  width: 50%;
+}
+
+.project-imageContainer {
+  width: 50%;
+}
+
+/* Vamos a hacer estas siguientes imágenes responsivas */
+.project-imageContainer img {
+  /* le vamos a dar el 100% de su elemento padre */
+  max-width: 100%
+}
+
+.header {
+  background-color: #1b2127;
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  /* le damos flex-wrap porque en tamaño grande se va a seguir comportando igual pero en tamaño pequeño va a comportarse de otra manera. */
+  flex-wrap: wrap;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+.menu {
+  height: inherit;
+}
+.header ol {
+  display: flex;
+  height: inherit;
+}
+.header ol li {
+  height: inherit;
+}
+.header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+
+.flexbox {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid red;
+
+  flex-shrink: 0;
+}
+
+.footer {
+  color: white;
+  background-color: #1b2127;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-list-title {
+  margin-left: 20px;
+}
+.event {
+  /* Variamos las medidas para convertirlas en medidas relativas */
+
+  /* 48+48+1+1 = 1000px , en su tamaño más grande */
+  margin: 1px;
+  width: 48%;
+
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.social {
+}
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter {
+  background-image: url('../images/twitter.svg');
+}
+.social-link.facebook {
+  background-image: url('../images/facebook.svg');
+}
+.social-link.github {
+  background-image: url('../images/github.svg');
+}
+.social-link.instagram {
+  background-image: url('../images/instagram.svg');
+}
+
+
+.form-email input {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../images/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button {
+  display: block;
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.form-email h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  /* border: 1px solid red; */
+  /* a container le quitamos el tamaño fijo y le asignamos un valor variable */
+  max-width: 1000px;
+  /* El ancho será como máximo de 1000px pero con la siguiente instrucción fuerzo a que siempre, aunque sea menor, el tamaño que ocupe sea ese, osea le voy a decir el 100% para que si sus hijos son más pequeños la suma de los mismos no me haga que el contenedor me cuente con menos de 1000. Es decir, tendrá un tamaño de 1000 siempre incluso cuando la suma de sus hijos sea menor que el máximo de 1000. */
+  /* width: 100%; */
+
+  /* Justo la anterior valdría para esto pero mejor vamos a utilizar la siguiente para conseguir lo mismo, osea, que se fuerce que aunque la suma de los elementos hijos sea menor de 1000 éstos ocupen todo ese ancho de 1000 */
+  flex: 1;
+  /* La ventaja es que con la anterior , width: 100%; , si le añadimos padding, por ejemplo, pues ya nos puede distorsionar nuestro resultado. */
+
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+/* Con esta nueva clase damos diseño al icono recién creado y que queremos convertirlo en botón. */
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba( 0, 0, 0, .8);
+  /* le asignamos un display block porque el display por defecto es el , line , y no dejaría asignar un alto y ancho como queremos que pase y que hemos ordenado estas líneas de justo arriba. */
+  display: block;
+  /* Hasta esta línea nuestro icono aparece descentrado en el círculo rojo que acabamos de dibujar con css. Ahora hay muchas formas de centrarlo pero vamos a optar por la siguiente, por ejemplo. */
+  align-items: center;
+  justify-content: center;
+  /* Esa sería una forma muy válida. Para mmí, quizá la mejor. Sin embargo en el curso, para que aprendamos, se deciden a hacerlo de esta manera siguiente. */
+  /* Centrada manera vertical */
+  line-height: 40px;
+  /* centrado de manera horizontal ya que es un texto!!! */
+  text-align: center;
+  /* Y ya tenemos el botón!!!. Mola mola */
+  /* Ahora vamos a asignarle una posición, vamos a colocarlo. */
+  /* position: absolute; Este estaría bien pero si hacemos scroll por la pantalla no nos persigue. Así que vamos a aplicar lo siguiente: */
+  position: fixed;
+  /* Y ahora resulta que cuando pasa por la foto se esconde detrás de ella. Para arreglarlo pues así lo vamos a hacer. */
+  z-index: 4;
+  /* Ahora vamos a moverlo un porquito para que no se nos pegue a las esquinas. */
+  left: 5px;
+  top: 5px;
+  /* Recordamos que nuestro icono es una fuente así que cambiarle lo siguiente va a ser muy fácil. */
+  color: white;
+  /* En pantallas grandes no queremos mostrarlo. En principio le vamos a mostrar un display de none. */
+  display: none;
+}
+
+/* Si vamos a seguir el Destop First lo mejor es empezar por el MQ(media query) más grande */
+@media screen and (max-width: 1023px) {
+
+  .event-list-title {
+    margin-left: 0;
+  }
+
+  /* Después de haber visto la página en un terminal móvil(iphone) preferimos que no tenga padding lo siguiente a partir de estas resoluciones. */
+  .portfolio {
+    padding: 0;
+  }
+
+
+  body {
+    /* border: 10px solid green; */
+
+  }
+  /* agregamos un poquito de padding para que los elementos de abajo no se peguen tanto a los costados. Para ello vamos a modificar un poco el , container , que afectará a todos los contenedores pero que está controlado, el resultado es bueno. */
+  .container {
+    padding: 0 1em;
+  }
+
+  .hero {
+
+    /* Necesitamos prescindir del alto fijo */
+    height: auto;
+
+    /* Necesitamos marcar aquí una posición relativa para que sirva de guía a los elementos subordinados. */
+    position: relative;
+    /* Lo hemos conseguido en este instante. La imagen subordinada ahora está dentro del hero y el menú superior vuelve a tomar su lugar. */
+
+    /* Acaba de comenzar este commit y en este instante la imagen principal(la que estamos modificando justo debajo) se ha desbordado de este , .hero ,. para corregir este comportamiento, desde este sitio vamos a ordenar lo siguiente que precisamente se llama "desbordamiento". */
+    overflow: hidden;
+    /* El padding nombrado está establecido en fijo. Ahora lo que vamos a hacer es nombrar un porquito de padding más dinámico */
+    padding: 2em;
+    /* Este padding está afectando sólo al texto */
+
+  }
+  .hero-image {
+    position: absolute;
+    z-index: 1;
+
+    /* queremos que esta imagen deje de respetar el padding así que le damos las siguientes instrucciones.
+    Así lograremos que se estire en todas direcciones.*/
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    /* Sólo con las instrucciones de las direcciones no obtenemos el resultado que queremos. Esto no entiendo por qué pasa pero es así. En definitiva, que tenemos que forzar que se estire la imagen y para ello necesitamos ordenar un ancho. */
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+    z-index: 2;
+  }
+}
+
+.html-video {
+  width: 100%;
+  /* La diferencia con , max-width: 100% , es que este último ocupará el 100% cuando pueda y sea su 100% original también. Sin embargo con el width normal se irá hasta ese 100% de la página aunque la misma sea más grande. */
+  height: auto;
+}
+
+.youtube-video {
+  /* width: 100%;
+  height: auto;
+  Hemos probado con esas dos instrucciones de arriba y el video no obtiene el resultado esperado. Es la diferencia entre insertar un video, donde sí que funciona, a incrustar este. Lo que hay que manipular es la etiqueta , iframe , así que comentamos las dos líneas de código y continuamos con la incrustación correcta del vídeo. */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.video-flexible {
+  /* Atentos al truco */
+  width: 100%;
+  height: 0;
+  /* Aquí está el meollo */
+  padding-top: 56.25%;
+  /* Y entonces, ¿cuál es el valor que se está aplicando? porque aquí sólo se han dado porcentajes. Pues bien. Debido a que se está aplicando un porcentaje en el padding, el valor que se está cogiendo es el del ancho de la pantalla y ese padding será su 56.25%. Y este valor porcentual se obtiene de la fórmula h(altura)*100/w(anchura) del vídeo de youtube que hemos insertado y cuyos valores se pueden ver en el html que son , width="560" height="315" ,. */
+  background: blue;
+  /* Vamos a darle una posición relativa para que la posición absoluta del vídeo que hemos metido dentro de este div en html pueda contenerse. */
+  position: relative;
+}
+
+/* Esta es la seguna forma de manipular las media queries, que es incluyendo la condición dentro del mismo archivo css */
+/* También esta es la forma en que se va a trabajar y no con la primera ni la tercera opción */
+
+/* bajamos la resolución 1px para acotar la resolución máxima. El iPad tiene una resolución de 768 así que a esta media query le bajamos un 1px para aplicar a todas las resoluciones menores */
+@media screen and (max-width: 767px) {
+
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
+
+  /* Y aquí comenzamos a mostrar el icono del menú burguer */
+  .burguer-button {
+    display: block;
+  }
+
+  /* Comenzamos readaptando el header para esta resolución */
+  .header {
+    /* Esto hará que el menú se coloque bajo el logo */
+    display: block;
+    /* Modificaremos también el alto porque si no, nuestro menú no será visible por quedarse fuera del alto especificado así que vamos a tocar ese parámetro. Le pondremos , auto , para que pise el valor anterior y asigne un valor automático. */
+    height: auto;
+  }
+  .header ol {
+    /* vamos también a resetear el , ol , haciendo un , initial , que provoca que el display se resetee a su valor por defecto. */
+    /* display: initial; */
+    /* funciona. Igual sería hacerlo block. */
+    display: block;
+  }
+
+  /* Vamos a darle un poco de grosor a esos , li ,. */
+  .header ol li {
+    height: 50px;
+  }
+
+  /* queremos los , a , centrados */
+  .header a {
+    justify-content: center;
+
+    /* Vamos a dar un poco de estilo a los items del menú */
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
+  }
+
+  /* Y el logo también lo queremos centrado */
+  .header .logo {
+    text-align: center;
+  }
+
+  /* Vamos a darle estilos al menú. Esto no es el burguer button, es el menú que también va a acompañar nuestro scroll. */
+  .menu {
+    position: fixed;
+    /* le damos un fondo */
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    /* Con estas tres líneas se ha posicionado tal y como se encuentra dentro del html pero tenemos que moverlo a donde nosotros queremos que esté y tal y como queremos que aparezca. */
+    top: 0;
+
+    /* Vamos ahora a ocultar el menú en la parte izquierda fuera de la vista. Nótese que la medida es la misma que se aplica para el ancho pero con valor negativo. */
+    left: -100vw;
+    /* Con esas dos líneas lo acabamos de ubicar pegadito arriba y a la derecha, justo detrás del botón del burguer button.  */
+
+    /* Ahora vamos a aprender otra medida relativa. Se trata del ViewPort width ((o vw)) que lo que hace es ajustar al ancho de la pantalla. */
+    width: 100vw;
+    /* Y el alto igual ViewPort height. */
+    /* height: 100vh; */
+    /* Resulta que hasta ahora el menú no se estira en vertical por la configuración misma del listado. Vamos a forzar que se estire hasta abajo comentando la que acabamos de comentar , vh , y ordenando lo siguiente. */
+    bottom: 0;
+
+    /* Vamos a colocar los elementos dentro del espacio del menú. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Añadimos un efecto de transición que funcionará cuando salga el menú de su escondite. */
+    transition: .3s;
+
+  }
+
+  /* Preparamos una clase que será la que reaccionará cuando el menú se active. */
+  /* Es de destacar LA SINTAXIS que se ve en la siguiente línea porque se ve una clase, un punto y seguido otra clase. Esto se interpreta con un , and ,, o sea, que se ejecutarán las instruccines sólo cuando las dos clases coincidan al mismo tiempo. */
+  .menu.is-active {
+    /* Con esta instrucción haremos que la parte izquierda vuelva al 0. */
+    left: 0;
+  }
+
+  .project {
+    display: block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  .project-details {
+    width: auto;
+    /* Este 16px es el tamaño de fuente por defecto, por esto se comenta la línea, es redundante. */
+    /* font-size: 16px; */
+  }
+
+  /* Vamos a retocar un poco los márgenes para que sean relativos a partir de esta resolución en la que nos encontramos */
+  .project-course, .project-date, .project-url {
+    /* reducimos un poquito los márgenes para aprovechar mejor el espacio en pantallas más pequeñas. */
+    margin: .3em 0;
+  }
+
+
+  .project-title {
+    font-size: 1.5em;
+    /* y aquí retocamos también un porquito ese margen */
+    margin-bottom: .3em;
+  }
+  .project-url {
+    font-size: 1em;
+  }
+  .project-course {
+    font-size: .7em;
+  }
+  .project-date {
+    font-size: 1em;
+  }
+  .project-description {
+    font-size: 1em;
+  }
+
+  .event {
+    width: auto;
+
+    /* flex-shrink: 0; hace que el contenedor no haga ningún tipo de resize. */
+    flex-shrink: initial;
+  }
+
+  /* vamos a ajustar la imagen para que no nos genere un scroll horizontal */
+  /* event-image {
+    width: 100%;
+  } */
+  /* Esto de arriba no valdría. En este caso tenemos órdenes para una etiqueta(img) y estábamos queriendo ordenar a la clase. Esto genera un conflicto que se resuelve dando prioridada a la etiqueta frente a la clase. Lógicamente vamos a ordenar a la etiqueta y chim pum. */
+  .event img {
+    width: 100%;
+  }
+
+  .event-detail {
+    /* margin: -40px 10px 10px 10px; */
+    /* Esta solución de arriba resuelve bien haciéndolo de modo absoluto. */
+    /* En la siguiente línea se resuelve de manera relativa con , em ,. El font-size no lo encontramos nombrado explícito y por eso sabemos que es de 16px. En este caso 1em = 16px */
+    margin: -2em .5em .5em;
+
+    /* bajaremos también un poco el padding */
+    padding: 1em;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /* Hemos notado que en este tamaño, la fuente del h1 resulta demasiado grande. Vamos a bajarla. */
+  h1 {
+    font-size: 1.5em;
+  }
+
+
+
+  .project-details {
+    font-size: 14px;
+  }
+  /* El contacto tiene un alto fijo, por eso a partir de este tamaño se le va a trabajar con otro tamaño */
+  .contact {
+    /* Esto hará que, cuando los elementos hijos se apilen, se adapte el fondo y se agrande si hiciera falta. */
+    height: auto;
+    padding: 1em 0;
+    /* text-align: center; */
+    /* Esto comentado no tiene efecto porque hay nombrado un display flex y esto arruina el modelo de caja para instrucciones como estas.
+    Por ese motivo vamos a cambiar el display*/
+    display: block;
+    /* Ahora sí */
+    text-align: center;
+  }
+
+  /* Retocamos un poquito el botón */
+  .form-email button {
+    margin: 1em auto;
+    /* Un , em , en este caso vale 11 porque por defecto los textos dentro de un botón no son 16 sino que son 11 1em=11px(dentro de un botón). */
+  }
+
+  Vamos a recortar un poco el margen del bloque del formulario de contacto. Para ello atacamos al margen del h3 en su parte superior.
+  .form-email h3 {
+    margin-top: 0;
+  }
+  /* display flex nos viene muy bien cuando queremos que los elementos se ordenen unos al lado de los otros pero en esta medida vamos a preferir que se apilen. Es por eso que le vamos a cambiar el display. */
+  .footer {
+    display: block;
+    text-align: center;
+    /* En este momento los elementos no guardan una buena relación aunque ya estén apilados. Estamos sufriendo , margin colapsing ,. Para arreglarlo vamos a usar un truco de magia. Un hack o algo así que en este momento desconozco por qué funciona pero lo hace.
+    Vamos a añadir un borde Transparente*/
+    border: 1px solid transparent;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    /* border: 10px solid green; */
+  }
+
+  h1 {
+    font-size: 1.2em;
+
+    /* Atentos!! aquí. Vamos a resaltar el texto con un fondo semitransparente */
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* No queda del todo mal, pero la mejor solución sería manipular la propia imagen para mejorar el contraste con el texto. Manipular la imagen propiamente, manipularla como imagen en algún editor de imagen. */
+  }
+  .hero {
+    padding: 2em 1em;
+  }
+}
