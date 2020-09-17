@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leonidas Esteban</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <!-- este siguiente es la primera forma de manipular las media queries, se trata de llamar a otra hoja de estilos si se cumple la condición dada -->
+    <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"> -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- tercera forma de manipular las mediaqueries. Desde el style del head siguiente. -->
+    <!-- <style media="screen">
+      @media screen and (max-width: 768px) {
+        body {
+          border: 10px solid blue;
+        }
+      }
+    </style> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!-- Ahora sí vamos a crear un elemento html para implementar nuesto icono de menú de hamburguesa(que en verdad es un tipo de fuente). -->
+    <!-- El siguiente tag , i , se recomienda para el tema de los iconos y tal aunque podríamos usar otro como , span , pero por convención lo vamos a hacer de la siguiente manera. -->
+    <!-- jajaj Me acabo de dar cuenta de que sin querer, al bajar el icono, lo modifiqué sin saber lo que estaba haciendo y puse algo gracioso, una cara de alien. Ahora descubro que el icono que me he bajado es una cara de alien. jajaja -->
+    <!-- añadimos otra clase -->
+    <!-- Añadimos un , id ,. -->
+    <i class="icon-menu burguer-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/logo.png" height="50" alt="Logo de http://leonidasesteban.com" />
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#portafolio">Portafolio</a>
+            </li>
+            <li>
+              <a class="link" href="#eventos">Experiencia</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Trabajemos juntos</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Hola! Soy <strong>Leonidas Esteban</strong> <br/> Desarrollador  <strong>Javascript</strong> con <br> pasión por la <strong>enseñanza</strong>
+        </h1>
+        <img class="hero-image" src="images/hero.jpg" width="500" height="300" alt="imagen principal del sitio">
+      </div>
+    </section>
+    <section id="portafolio" class="portfolio">
+      <div class="container">
+        <h2>Portafolio (Proyectos Destacados)</h2>
+      <article class="project">
+        <div class="project-details">
+          <h3 class="project-title">Platzi Video</h3>
+          <h6 class="project-course">React Native / React</h6>
+          <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+          <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+          <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
+              para crear la mejor app para enseñar el funcionamiento
+              de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
+        </figure>
+      </article>
+      <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Platzi Video</h3>
+            <h6 class="project-course">React Native / React</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+            <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
+                para crear la mejor app para enseñar el funcionamiento
+                de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <div class="container">
+      <h2 class="event-list-title">Más sobre mi experiencia</h2>
+    </div>
+
+    <section id="eventos" class="event-list">
+      <div class="container">
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <div class="video-flexible">
+
+              <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500" /> -->
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <video class="html-video" src="videos/f8.mp4" width="1280" height="720" controls poster="posterimage.jpg">
+
+            </video>
+            <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500" /> -->
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PlatziConf México 2018</h3>
+            <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento te comparto como tener una vida de constante aprendizaje.</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+          </div>
+        </article>
+      </div>
+    </section> -->
+     <section id="contacto" class="contact">
+      <div class="container">
+        <form action="/suscripcion/" class="form-email">
+          <h3>¿Creamos algo juntos?</h3>
+          <input type="text" placeholder="Déjame tu email" id="email">
+          <button>Enviar</button>
+        </form>
+        <div class="social">
+          <a href="https://twitter.com/leonidasesteban" class="social-link twitter"></a>
+          <a href="https://facebook.com/leonidas.esteban" class="social-link facebook"></a>
+          <a href="https://github.com/leonidasesteban" class="social-link github"></a>
+          <a href="https://instagram.com/leonidasesteban" class="social-link instagram"></a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <p>Curso de Desarrollo web online 2018 <img src="images/platzi.png" width="80" alt="platzi"></p>
+        </div>
+        <div>
+          <p>
+            Designed with ❤️ by <a href="https://twitter.com/thespianartist">@thespianartist</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Aquí vamos a brir un espacio para JS -->
+    <script type="text/javascript">
+      // No está nada mal ir añadiendo console.log para ir cogiendo control de que todo funciona correctamente.
+      console.log('Hola mundo esta es la primera línea de control -');
+      // Creamos la variable , menu , y metemos dentro todo el menú html
+      const menu = document.querySelector('.menu');
+      // Ahora comprobamos que la variable funciona.
+      console.log(menu);
+
+      // Lo que vamos a hacer a continuación es lo siguiente. Resulta que acabamos de darle funcionalidad al botón del menú. Al botón de hamburguesa. Pero el botón de hamburguesa no se ve en todas las resoluciones. Se ve sólo a partir de un tamaño por debajo del iPad. Lo que queremos es hacer que el listener se ponga a la escucha pero sólo cuando le haga falta. Por ejmplo, no queremos que esté a la escucha cuando la resolución es desktop.
+
+      // Entonces ahora vamos a invocar a otra API que tiene el navegador. Está dentro de la pantalla, dentro de window. Y para comenzar vamos a hacer un console.log();.
+      // console.log(window.matchMedia('screen and (max-width: 767px)'));
+      // Pues con esa instrucción, en la consola de la ventana de inspección del navegador, jugando con las resoluciones, podemos comprobar cómo devuelve verdadero o falso dependiendo del tamaño que le estamos dando a la ventana a inspeccionar.
+
+      // Qué ocurre? que la instrucción mediaQuery funciona pero no es dinámica. Sólo funciona cuando cargamos la página. Ahora intentaremos que sea dinámico para que cuando movamos la pantalla de tamaño o giremos el teléfono Entonces Sí se recargue y conseguimos que sea dinámica la respuesta a esta instrucción.
+      // Lo primero vamos a hacer las cosas bien y vamos a meter esta instrucción en una variable. La llamaremos ipad porque es a partir de un pixel por debajo de esa resolución que haremos que funcione todo esto.
+      const ipad = window.matchMedia('screen and (max-width: 767px)');
+
+
+      // Comprobando que todo va funcionando correctamente vamos a por el botón del menú. Vamos a meterlo en una variable.
+      // Para ello nos valemos del , id , que acabamos de marcar arriba y para eso lo llamamos con el símbolo , # , que es el que busca entre los , id ,.
+      const burgerButton = document.querySelector('#burger-menu');
+      // Y volvemos a comprobar que esto también se está llevando a cabo de la manera correcta.
+      console.log(burgerButton);
+
+      // A continuación, ya con las variables declaradas, vamos a darle marcha a esto. Venga!! A por el siguiente commit!
+
+      // Añadimos un listener
+      // burgerButton.addEventListener('click', hideShow);
+      // La función hideShow la hemos nombrado así nosotros, claro.
+
+      // flipa con las siguientes líneas. Ahora la variable , ipad , tiene una serie de propiedades. Entre ellas está la siguiente que No tiene que confundirse con addEventListener. No confundir.
+      ipad.addListener(validation); // validation es una función. Le hemos dado este nombre como le podíamos haber llamado osoPanda.
+      // Y claro, ahora vamos a armar esa función:
+      // Hemos encontrado un problema y es que, cuando cargamos la página en el teléfono o en una resolución de las bajas, el menú funciona porque esta línea no se ejecuta nunca. Vamos a ponerle remedio.
+
+      // La función validadión, pues, debería ejecutarse nada más cargue la página.
+      function validation(event) { // Y , event , también podríamos haberlo llamado patrullaCanina, que nos hubiera servido igual.
+      // Lo siguiente que vamos a hacer está cantado. Vamos a utilizar esta propiedad para decidir con un if. Vamos allá.
+      if (event.matches) {
+        // Pues aquí agregamos el listener.
+        burgerButton.addEventListener('click', hideShow);
+      } else {
+        // Si no se cumple la condición debemos explicitar que no haya ningún escuchante listener para optimizar los recursos. Para ello esto es sencillísimo. Sólo hay que quitarlo si no hace falta. Con removeEtcEtcEtc. Venga.
+        burgerButton.removeEventListener('click', hideShow);
+      }
+
+      console.log(event.matches);
+      // Este , .matches , es la propiedad que nos devolverá verdadero o falso y por ello nos dirigimos contra ella para usar ese valor.
+      }
+      // Y con esto hemos conseguido que cuando se mueva la pantalla, que la pantalla cambie de resolución/tamaño, pues se active este listener. Lo podemos comprobar en la página agrandando o achicando la misma en la pantalla.
+
+      // Para hacer lo explicado vamos a ejecutar , validation() , en la siguiente línea para obligar a que se ejecute por primera vez nada más se cargue la página. Vamos a notar que la función, en la actual línea 211, recibe un evento al que luego leemos el match. Esta función era en el anterior commit invocada desde un método de la variable , ipad , que habíamos creado. Y como método que era funcionaba bien. Qué ocurre? pues que ahora es invocada directamente así que por parámetro le vamos a pasar , ipad , para que su match sea leído de igual forma que lo hacía siendo invocado desde el método que mencionamos.
+      validation(ipad);
+
+      // A continuación vamos a ver qué es lo que hace esta función. Vamos a decirle que haga algo.
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+
+    </script>
+  </body>
+</html>
